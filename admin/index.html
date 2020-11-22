@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="keywords" content="">
+    <meta name="description" content="Temporal Games — Game Development, AI Research & Deployment">
+    <meta name="title" content="Temporal Games">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">
+
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="fadein" id="main">
+<div  id="loginBlock"  class="wrapper">
+    <div class="content">
+        <div class="login-block">
+            <form name="login">
+                <div class="">
+                    <input type="text" id="usernameId" name="username" placeholder="username">
+                </div>
+                <div class="">
+                    <input type="password" id="password" name="password" placeholder="password">
+                </div>
+                <div class="">
+                    <button type="button"  class="btn-log" onclick="check(this.form) ">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div  id="admin" class="wrapper">
+    <header id="header">
+        <div class="content">
+            <a href="index.html" class="logo_icon"><img src="../assets/images/logo_icon.svg" alt="Temporal Games"></a>
+            <br>
+            <ul class="menu">
+                <li><a>Admin panel</a></li>
+                <li>
+                    <button type="submit" class="btn-log" onclick="clearStorage()">Clear</button>
+                    <div id="messageReset"></div>
+                </li>
+                <li>
+                    <button type="button" class="btn-log" onclick="checkBtn(this.button) ">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="about">
+        <div class="content">
+            <h1 class="heading_mobile">Game Development, AI&nbsp;Research &&nbsp;Deployment</h1>
+        </div>
+        <div class="banner" style="background-image:url('../assets/images/banner_2.jpg')">
+            <h1>Game Development,<br>AI&nbsp;Research &&nbsp;Deployment</h1>
+            <img id="previewImage" contenteditable src="../assets/images/logo_main.svg" alt="Temporal Games"
+                 class="logo_main">
+        </div>
+        <div class="content">
+            <br>
+            <div id="messageUpload"></div>
+            <label for=""><b>Change logo</b></label>
+            <input type="file" id="fileImage">
+            <div class="quote">
+                <div id="message"></div>
+                <label for=""><b>Change description</b></label>
+                <h3 contenteditable>Evolving AI has untapped potential for bringing engaging interactions with
+                    virtual characters. At every step of the way we find new opportunities for applying our stack to new
+                    fields within games, social and entertainment products.</h3>
+                <p><a href="#jobs" onclick="event.preventDefault();doScrolling('jobs', this)" id="jobs_inner_link">Join
+                    us <span class="arrow">&darr;</span></a></p>
+                <button type="submit" class="btn-log" onclick="saveChanges()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    // document.querySelector("#fileImage").addEventListener('change', function () {
+    //     const reader = new FileReader();
+    //     reader.addEventListener('load', () => {
+    //       localStorage.setItem("recent-image", reader.result);
+    //     });
+    //     reader.readAsDataURL(this.files[0]);
+    // });
+    // document.addEventListener('DOMContentLoaded',()=>{
+    // const imgUrl = localStorage.getItem("recent-image");
+    // if (imgUrl){
+    //     document.querySelector('#previewImage').setAttribute('src',imgUrl);
+    // }
+    // });
+    // var ddd = "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg";
+    //
+    // let path = '../assets/images/';
+    // var data;
+    // let textImage = document.getElementById("banner").src = ddd;
+    // var postDataImg = window.localStorage.getItem("edit");
+    // var reset = textImage.innerHTML;
+    // if (postDataImg == null || postDataImg === '') {
+    //     data = textImage.innerHTML;
+    //     // store default value
+    //     window.localStorage.setItem("edit", data);
+    //     // make it placeholder style
+    //     textImage.classList.remove('changed');
+    // } else {
+    //     // if there is a value post it
+    //     textImage.innerHTML = postDataImg;
+    //     // make dark text
+    //     textImage.classList.add('changed');
+    // }
+    //
+    // function myFunction() {
+    //     var paragraph = document.getElementById("message");
+    //     var mess = document.createTextNode("Success!");
+    //     paragraph.appendChild(mess);
+    //
+    //     data = text.innerHTML;
+    //     window.localStorage.setItem("edit", data);
+    // }
+</script>
+<script language="JavaScript">
+    // var username = sessionStorage.getItem("key");
+    // var password = sessionStorage.getItem("key");
+    // if (username === null && password === null) {
+    //     document.getElementById('loginBlock').style.display = 'block';
+    //     document.getElementById('admin').style.display = 'none';
+    // } else {
+    //     document.getElementById('loginBlock').style.display = 'none';
+    //     document.getElementById('admin').style.display = 'block';
+    // }
+</script>
+
+<script src="../assets/js/main.js"></script>
+
+</html>
